@@ -22,7 +22,7 @@ class ReportsController extends BaseController {
 
 	public function add(){
 		
-		$date = date('D - M - Y');
+		$date = date('D / MM - YY');
 		$name = 'Expense Report - ('.$date .')';
 		
 		$report = new Report;
