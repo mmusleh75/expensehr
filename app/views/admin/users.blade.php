@@ -158,11 +158,5 @@
 
 
 
-        {{ HTML::script('js/datatables/js/jquery.dataTables.js') }}
-        {{ HTML::script('js/datatables/tools/js/dataTables.tableTools.js') }}
-        {{ HTML::script('js/table.js') }}
-
-
-
 
 @stop

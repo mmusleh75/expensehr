@@ -29,14 +29,23 @@
          endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 6);
 
         var dateFormat = inst.settings.dateFormat || $.datepicker._defaults.dateFormat;
-            $('#startDate').val($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
+            $('#sun').val($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
             $('#mon').val($.datepicker.formatDate( dateFormat, mon, inst.settings ));
             $('#tus').val($.datepicker.formatDate( dateFormat, tus, inst.settings ));
             $('#wen').val($.datepicker.formatDate( dateFormat, wen, inst.settings ));
             $('#the').val($.datepicker.formatDate( dateFormat, the, inst.settings ));
             $('#fri').val($.datepicker.formatDate( dateFormat, fri, inst.settings ));
-            $('#endDate').val($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
-
+            $('#sat').val($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+            for(i=1;i<6;i++){
+               
+                $('#sunday' + i).text($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
+                $('#monday' + i).text($.datepicker.formatDate( dateFormat, mon, inst.settings ));
+                $('#tusday' + i).text($.datepicker.formatDate( dateFormat, tus, inst.settings ));
+                $('#wendnesday' + i).text($.datepicker.formatDate( dateFormat, wen, inst.settings ));
+                $('#thursday' + i).text($.datepicker.formatDate( dateFormat, the, inst.settings ));
+                $('#friday' + i).text($.datepicker.formatDate( dateFormat, fri, inst.settings ));
+                $('#satarday' + i).text($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+            }
 
 		$calroot.trigger('weekselected',{
 			start:startDate,

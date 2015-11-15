@@ -2,8 +2,6 @@
 
 @section('content')
 
-    {{ HTML::style('css/datatables/tools/css/dataTables.tableTools.css') }}
-    {{ HTML::style('css/icheck/flat/green.css') }}
 
 
                     <div class="">
@@ -58,9 +56,12 @@
                                                     <td class=" ">{{ $location->lunch }}
                                                     </td>
                                                     <td class=" ">{{ $location->dinner }}</td>
-                                                    <td class="col-md-3">
-                                                        <button class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</button>
-                                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i>Delete</button>
+                                                    <td class="col-md-2">
+                                                       <a   href="{{ route('admin.locations.edit',$location->id) }}" class="btn btn-info btn-xs pull-left"><i class="fa fa-pencil"></i> Edit</a>
+                                                  
+                                                        {{ Form::open(['onclick' => 'return confirm("Are you sure to delete this Location?");','method' => 'DELETE','route' => ['admin.locations.destroy', $location->id]]) }}
+                                                            <button class="btn btn-danger  btn-xs"><i class="fa fa-trash-o"></i>Delete</button>
+                                                        {{ Form::close() }}
                                                     </td>
                                                
                                                 </tr>
@@ -91,7 +92,7 @@
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
-                                        {{ Form::open(['route' => 'admin.locations.store', 'method' =>'post', 'class' => 'form-horizontal']) }}
+                                        {{ Form::open(['route' => 'admin.locations.store', 'method' =>'post', 'data-parsley-validate class' => 'form-horizontal']) }}
                                                 <div class="form-group">
                                                     {{ Form::label('Location','Location *',array('class' => 'control-label col-md-2 col-sm-2 col-xs-12')) }}
                                                     <div class="col-md-10 col-sm-10 col-xs-12">
@@ -150,13 +151,7 @@
 
                 </div><!--/class-->
 
-        <script type="text/javascript" src="js/parsley/parsley.min.js"></script>
 
-
-        {{ HTML::script('js/datatables/js/jquery.dataTables.js') }}
-        {{ HTML::script('js/datatables/tools/js/dataTables.tableTools.js') }}
-        {{ HTML::script('js/parsley/parsley.min.js') }}
-        {{ HTML::script('js/table.js') }}
 
 
 

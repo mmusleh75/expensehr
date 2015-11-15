@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration {
 		Schema::create('locations', function($table)
 		{
 			$table->increments('id');
-			$table->string('location')->unique();
+			$table->string('name');
 			$table->string('breakfast');
 			$table->string('lunch');
 			$table->string('dinner');

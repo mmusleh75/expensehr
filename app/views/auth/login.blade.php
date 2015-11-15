@@ -62,7 +62,7 @@
                             {{ Form::password('password',array('class' => 'form-control' , 'placeholder' => 'Your Password')) }}
                         </div>
                         <div>
-                             {{ Form::submit('login',array('class' => 'btn btn-success')) }}
+                             {{ Form::submit('Login',array('class' => 'btn btn-success')) }}
                         {{ Form::close() }}
                                 <a class="reset_pass" href="#">Lost your password?</a>
                         </div>

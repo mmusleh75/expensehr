@@ -20,6 +20,7 @@
         {{ HTML::style('css/animate.min.css') }}
         {{ HTML::style('css/custom.css') }}
         {{ HTML::style('css/icheck/flat/green.css') }}
+    {{ HTML::style('css/datatables/tools/css/dataTables.tableTools.css') }}
 
 
         {{ HTML::script('js/jquery.min.js') }}
@@ -295,7 +296,17 @@
 
         {{ HTML::script('js/custom.js') }}
 
+        {{ HTML::script('js/parsley/parsley.min.js') }}
         {{ HTML::script('js/icheck/icheck.min.js') }}
+        {{ HTML::script('js/datatables/js/jquery.dataTables.js') }}
+        {{ HTML::script('js/datatables/tools/js/dataTables.tableTools.js') }}
+        {{ HTML::script('js/table.js') }}
+        {{ HTML::script('js/wizard/jquery.smartWizard.js') }}
+        {{ HTML::script('js/wizard/wizard.js') }}
+        {{ HTML::script('js/checkboxsum/checkboxsum.js') }}
+        {{ HTML::script('js/checkboxsum/calculatesum.js') }}
+        {{ HTML::script('js/checkboxsum/section1.js') }}
+
 
 </body>
 

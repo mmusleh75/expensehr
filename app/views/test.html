@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentallela Alela! | </title>
+
+    <style>
+table {
+  border-collapse: collapse;
+  border: 1px solid #666;
+  font: 12px verdana;
+}
+
+th {
+  background: #def;
+}
+
+td, th {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #bbb;
+  padding: 0.3em;
+}
+
+input {
+  width: 4em;
+  text-align: right;
+  background: lightyellow;
+}
+
+tr td:last-child {
+  background: yellow;
+  text-align: right;
+}
+
+.totalRow {
+  text-align: right;
+  background: yellow;
+}
+
+
+    </style>
+</head>
+
+
+<body class="nav-md">
+<table>
+    <tr>
+        <td>
+             <h4><em>Contract Amount</em></h4>
+
+        </td>
+        <td>
+            <input type="text" class="rr" value="100"/>
+        </td>
+        <td>
+            <input type="text" class="rr1" />
+        </td>
+        <td>
+            <input type="text" class="rr2" />
+        </td>
+        <td>
+            <input type="text" class="rr3" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <h5><em>Contract Amount</em></h5>
+
+        </td>
+        <td>
+            <input type="text" class="rr" value="200" />
+        </td>
+        <td>
+            <input type="text" class="rr1" />
+        </td>
+        <td>
+            <input type="text" class="rr2" />
+        </td>
+        <td>
+            <input type="text" class="rr3" />
+        </td>
+    </tr>
+
+    <tr class="nettotal tt table-sub" data-minus="ca,contract,other2">
+        <td>
+             <h4>Net Cash</h4>
+
+        </td>
+        <td>
+            <input type="text" id="rr" />
+        </td>
+        <td>
+            <input type="text" id="rr1" />
+        </td>
+        <td>
+            <input type="text" id="rr2" />
+        </td>
+        <td>
+            <input type="text" id="rr3" />
+        </td>
+    </tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+function calcSubMTotal(p) {
+    var minus = 0;
+    var isFirst=true;
+    var minus_total = $('#' + p + '');
+
+
+    $('.' + p + '').each(function (i) {
+        if (!isNaN(this.value) && this.value.length !== 0) {
+            if(!isFirst)
+            minus += parseInt(this.value); 
+            else
+            {
+                minus=parseInt(this.value)*(-1);
+                isFirst=false;
+            }
+        }
+    });
+
+    minus_total.val(minus);
+
+
+}
+
+$('input[type=text]').on('keyup', function () {
+    calcSubMTotal("rr");
+    calcSubMTotal("rr1");
+    calcSubMTotal("rr2");
+    calcSubMTotal("rr3");
+});
+    calcSubMTotal("rr");
+    calcSubMTotal("rr1");
+    calcSubMTotal("rr2");
+    calcSubMTotal("rr3");
+    </script>
+</body>
+</html>

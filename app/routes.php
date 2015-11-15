@@ -45,13 +45,31 @@ Route::group(['before' => 'auth'], function()
     Route::post('profile/personal-info', 'ProfilesController@personalInfo');
     Route::post('profile/avatar-upload', 'ProfilesController@avatarUpload');
     Route::get('reports', 'ReportsController@index');
-    Route::get('create/report', 'ReportsController@create');
-    Route::post('reports/store', 'ReportsController@store');
+    Route::get('addReport', 'ReportsController@add');
+    Route::post('create', 'ReportsController@create');
     Route::get('dates', 'ReportsController@dates');
     Route::get('reports/form', 'ReportsController@report');
+    Route::put('update/{id}', 'ReportsController@update');
+    Route::resource('reports', 'ReportsController');
+    Route::post('aj',  'ReportsController@aj');
+    Route::get('reports/form/fr',  'ReportsController@fr');
 
 });
+        
 
+        /*Route::post('getLocation',  function(){
+        
+        if(Request::ajax())
+        {
+            if(Input::has('id'))
+            {
+                return Response::json("ghhho");
+            }
+
+        }   
+     });
+*/
+Route::post('getLocation',  'LocationsController@get');
 
 // Admin Routes
 Route::group(['before' => 'auth|role:admin','prefix' => 'admin'], function()

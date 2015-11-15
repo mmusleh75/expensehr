@@ -37,8 +37,8 @@ class LocationsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$permission = \Permission::find($id);
-		return \View::make('permissions.edit', compact('permission'));
+		$location = \Location::find($id);
+		return \View::make('locations.edit', compact('location'));
 	}
 
 	/**
@@ -50,9 +50,9 @@ class LocationsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$permission = \Permission::findOrFail($id);
-		$permission->update($data = \Input::all());
-		return \Redirect::route('admin.permissions.index');
+		$location = \Location::findOrFail($id);
+		$location->update($data = \Input::all());
+		return \Redirect::route('admin.locations.index');
 	}
 
 	/**
@@ -62,10 +62,11 @@ class LocationsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
 	public function destroy($id)
 	{
-		\Permission::destroy($id);
-		return \Redirect::route('admin.permissions.index');
+		\Location::destroy($id);
+		return \Redirect::route('admin.locations.index');
 	}
 
 }

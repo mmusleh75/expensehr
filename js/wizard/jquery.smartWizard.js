@@ -21,9 +21,9 @@ function SmartWizard(target, options) {
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-        next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("btn btn-success"),
+        next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("btn btn-success pull-right"),
         previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("btn btn-primary"),
-        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("btn btn-default")
+        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("btn btn-default pull-right")
     };
 
     /*
@@ -466,7 +466,7 @@ function SmartWizard(target, options) {
 // Default Properties and Events
     $.fn.smartWizard.defaults = {
         selected: 0,  // Selected Step, 0 = first step
-        keyNavigation: true, // Enable/Disable key navigation(left and right keys are used if enabled)
+        keyNavigation: false, // Enable/Disable key navigation(left and right keys are used if enabled)
         enableAllSteps: false,
         transitionEffect: 'fade', // Effect on navigation, none/fade/slide/slideleft
         contentURL:null, // content url, Enables Ajax content loading

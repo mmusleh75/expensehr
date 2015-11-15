@@ -15,8 +15,7 @@ class CreateTimesTable extends Migration {
 		Schema::create('times', function($table)
 		{
 			$table->increments('id');
-			$table->integer('location_id')->unsigned()->index();
-			$table->foreign('location_id')->references('id')->on('locations');
+			$table->integer('location_id');
 			$table->integer('report_id')->unsigned()->index();
 			$table->foreign('report_id')->references('id')->on('reports')->onDelete('cascade');
 			$table->string('days');
