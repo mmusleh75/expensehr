@@ -75,7 +75,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">1</span>
                                                                         <span class="step_descr">
                                                                 Step 1<br />
-                                                                <small>Step 1 description</small>
+                                                                <small>Week Selection</small>
                                                             </span>
                                                                     </a>
                                                                 </li>
@@ -84,7 +84,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">2</span>
                                                                         <span class="step_descr">
                                                                 Step 2<br />
-                                                                <small>Step 2 description</small>
+                                                                <small>Meals</small>
                                                             </span>
                                                                     </a>
                                                                 </li>
@@ -93,7 +93,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">3</span>
                                                                         <span class="step_descr">
                                                                 Step 3<br />
-                                                                <small>Step 3 description</small>
+                                                                <small>Client & Explanation</small>
                                                             </span>
                                                                     </a>
                                                                 </li>
@@ -102,7 +102,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">4</span>
                                                                         <span class="step_descr">
                                                                                 Step 4<br />
-                                                                            <small>Step 4 description</small>
+                                                                            <small>Mileage</small>
                                                                         </span>
                                                                     </a>
                                                                 </li>
@@ -112,7 +112,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">5</span>
                                                                         <span class="step_descr">
                                                                                 Step 5<br />
-                                                                            <small>Step 5 description</small>
+                                                                            <small>Travel Expense</small>
                                                                         </span>
                                                                     </a>
                                                                 </li>
@@ -121,7 +121,7 @@ input[type=checkbox].glyphicon{
                                                                         <span class="step_no">6</span>
                                                                         <span class="step_descr">
                                                                                 Step 6<br />
-                                                                            <small>Step 6 description</small>
+                                                                            <small>Other Expense</small>
                                                                         </span>
                                                                     </a>
                                                                 </li>
