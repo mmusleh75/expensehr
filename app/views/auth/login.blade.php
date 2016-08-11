@@ -54,7 +54,7 @@
 
                     {{ Form::open(array('url' => 'login','method' => 'POST'))  }}
                         {{ Form::token() }}
-                        <h1>Login Form</h1>
+                        <h1>Login Form 22</h1>
                         <div>
                             {{ Form::text('email','',array('class' => 'form-control' , 'placeholder' => 'E-mail')) }}
                         </div>
